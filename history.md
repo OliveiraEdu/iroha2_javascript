@@ -1,5 +1,4 @@
-` ` `
-bash
+` ` `bash
 oot@1683379ff8ed:/home/project/app# history
     1  apt update
     2  pwd
