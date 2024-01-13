@@ -4,7 +4,7 @@ Following the instructions at https://hyperledger.github.io/iroha-2-docs/guide/g
 mkdir /home/project/app
 cd /home/project/app
 apt update
-apt install -y curl
+apt install -y curl git
 curl -sL https://deb.nodesource.com/setup_20.x | bash -
 apt-get install nodejs
 npm init
