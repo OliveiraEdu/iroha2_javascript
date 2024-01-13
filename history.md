@@ -15,6 +15,8 @@ npm i @iroha2/crypto-core
 npm i @iroha2/crypto-target-node
 npm i @iroha2/crypto-target-web
 npm i @iroha2/crypto-target-bundler
+npm i hada
+npm i tsx -g
 ```
 
  
