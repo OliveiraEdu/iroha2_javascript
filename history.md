@@ -1,3 +1,5 @@
+Following the instructions at https://hyperledger.github.io/iroha-2-docs/guide/get-started/javascript.html
+
 ```bash
 mkdir /home/project/app
 cd /home/project/app
