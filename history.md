@@ -1,4 +1,4 @@
-` ` `bash
+` ` `  bash
 oot@1683379ff8ed:/home/project/app# history
     1  apt update
     2  pwd
@@ -19,5 +19,6 @@ oot@1683379ff8ed:/home/project/app# history
    17  npm i @iroha2/crypto-target-node
    18  npm i @iroha2/crypto-target-web
    19  npm i @iroha2/crypto-target-bundler
-   ` ` ` 
+   ```
+ 
    
