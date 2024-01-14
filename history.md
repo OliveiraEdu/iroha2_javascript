@@ -20,5 +20,12 @@ npm i tsx -g
 npm i node fetch
 ```
 
- 
+ Running scripts
+
+ ```ts
+tsx example.ts
+```
+
+
+
    
