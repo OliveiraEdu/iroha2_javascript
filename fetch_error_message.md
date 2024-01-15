@@ -1,4 +1,4 @@
-' ' ' 
+''' 
 tsx Signer.ts 
 /home/project/app/Signer.ts:45
   fetch: fetch.bind(window),
@@ -13,4 +13,6 @@ ReferenceError: window is not defined
     at async handleMainPromise (node:internal/modules/run_main:113:12)
 
 Node.js v20.11.0
-' ' ' 
+
+'''
+
