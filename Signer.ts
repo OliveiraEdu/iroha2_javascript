@@ -1,17 +1,18 @@
 import { cryptoTypes } from '@iroha2/crypto-core'
 import { Signer } from '@iroha2/client'
-import { AccountId, DomainId } from '@iroha2/data-model'
+import { datamodel } from '@iroha2/data-model'
 
 // Key pair from previous step
 declare const keyPair: cryptoTypes.KeyPair
 
-const accountId = AccountId({
-  // Account name
+const acc = datamodel.AccountId({
   name: 'alice',
-  // The domain where this account is registered
-  domain_id: DomainId({
+  domain_id: datamodel.DomainId({
     name: 'wonderland',
   }),
 })
 
-const signer = new Signer(accountId, keyPair)
+const signer = new Signer(acc, keyPair)
+
+
+
