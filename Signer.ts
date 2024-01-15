@@ -35,6 +35,8 @@ const acc = datamodel.AccountId({
 // Create a signer with the defined account ID and key pair
 const signer = new Signer(acc, keyPair)
 
+// ... (previous code remains unchanged)
+
 // Define Torii requirements
 const toriiRequirements: ToriiRequirementsForApiHttp &
   ToriiRequirementsForApiWebSocket &
@@ -45,12 +47,8 @@ const toriiRequirements: ToriiRequirementsForApiHttp &
   fetch: fetch.bind(window),
 }
 
-// --snip--
-declare const signer: Signer
-declare const toriiRequirements: ToriiRequirementsForApiHttp
-
-// Create a client with the signer
-const client = new Client({ signer })
+// Create a client with the signer and using the correct fetch binding
+const client = new Client({ signer, fetch: toriiRequirements.fetch })
 
 // `Client` will sign & wrap `Executable` into `VersionedSignedTransaction`
 declare const exec: Executable
