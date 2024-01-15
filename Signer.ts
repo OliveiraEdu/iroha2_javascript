@@ -2,6 +2,14 @@ import { cryptoTypes } from '@iroha2/crypto-core'
 import { Signer } from '@iroha2/client'
 import { datamodel } from '@iroha2/data-model'
 import { crypto } from '@iroha2/crypto-target-node'
+import {
+  ToriiRequirementsForApiHttp,
+  ToriiRequirementsForApiWebSocket,
+  ToriiRequirementsForTelemetry,
+} from '@iroha2/client'
+import { adapter as WS } from '@iroha2/client/web-socket/native'
+import { Client, Signer, ToriiRequirementsForApiHttp } from '@iroha2/client'
+import { Executable } from '@iroha2/data-model'
 
 // Define key pair using crypto library
 const keyPair = crypto.KeyPair.fromJSON({
@@ -13,7 +21,7 @@ const keyPair = crypto.KeyPair.fromJSON({
   },
 })
 
-// Key pair from previous step
+// Key pair from the previous step
 declare const keyPair: cryptoTypes.KeyPair
 
 // Define account ID
@@ -27,7 +35,30 @@ const acc = datamodel.AccountId({
 // Create a signer with the defined account ID and key pair
 const signer = new Signer(acc, keyPair)
 
+// Define Torii requirements
+const toriiRequirements: ToriiRequirementsForApiHttp &
+  ToriiRequirementsForApiWebSocket &
+  ToriiRequirementsForTelemetry = {
+  apiURL: 'http://127.0.0.1:8080',
+  telemetryURL: 'http://127.0.0.1:8081',
+  ws: WS,
+  fetch: fetch.bind(window),
+}
+
+// --snip--
+declare const signer: Signer
+declare const toriiRequirements: ToriiRequirementsForApiHttp
+
+// Create a client with the signer
+const client = new Client({ signer })
+
+// `Client` will sign & wrap `Executable` into `VersionedSignedTransaction`
+declare const exec: Executable
+await client.submitExecutable(toriiRequirements, exec)
+
 // Print messages for monitoring each phase of execution
 console.log('Key pair created:', keyPair);
 console.log('Account ID created:', acc);
 console.log('Signer created:', signer);
+console.log('Client created:', client);
+console.log('Executable submitted:', exec);
