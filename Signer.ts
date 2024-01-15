@@ -42,7 +42,7 @@ const toriiRequirements: ToriiRequirementsForApiHttp &
   apiURL: 'http://127.0.0.1:8080',
   telemetryURL: 'http://127.0.0.1:8081',
   ws: WS,
-  fetch: fetch.bind(window),
+  fetch: typeof window !== 'undefined' ? fetch.bind(window) : fetch,
 }
 
 // Create a client with the signer and using the correct fetch binding
