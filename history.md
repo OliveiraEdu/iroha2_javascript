@@ -25,7 +25,11 @@ npm i node fetch
  ```ts
 tsx example.ts
 ```
+Installing pnpm
 
+```
+npm install -g pnpm
+```
 
 
    
