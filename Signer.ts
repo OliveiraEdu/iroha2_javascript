@@ -35,8 +35,6 @@ const acc = datamodel.AccountId({
 // Create a signer with the defined account ID and key pair
 const signer = new Signer(acc, keyPair)
 
-// ... (previous code remains unchanged)
-
 // Define Torii requirements
 const toriiRequirements: ToriiRequirementsForApiHttp &
   ToriiRequirementsForApiWebSocket &
