@@ -9,7 +9,7 @@ apt install -y curl git
 curl -sL https://deb.nodesource.com/setup_20.x | bash -
 apt-get -y install nodejs
 npm install -g pnpm
-npm init
+npm init --yes
 echo "@iroha2:registry=https://nexus.iroha.tech/repository/npm-group/" > .npmrc
 npm i @iroha2/client@5.0.0
 npm i @iroha2/data-model@5.0.0
