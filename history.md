@@ -6,7 +6,7 @@ cd /home/project/app
 apt update
 apt install -y curl git
 curl -sL https://deb.nodesource.com/setup_20.x | bash -
-apt-get install nodejs
+apt-get -y install nodejs
 npm install -g pnpm
 npm init
 echo "@iroha2:registry=https://nexus.iroha.tech/repository/npm-group/" > .npmrc
