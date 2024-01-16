@@ -1,11 +1,12 @@
 Following the instructions at https://hyperledger.github.io/iroha-2-docs/guide/get-started/javascript.html
 
 ```bash
-mkdir /home/Git
-cd /home/Git
 apt update
 apt install -y curl git
+mkdir /home/Git
+cd /home/Git
 git clone https://github.com/OliveiraEdu/iroha2_javascript/
+cd /home/Git/iroha2_javascript
 curl -sL https://deb.nodesource.com/setup_20.x | bash -
 apt-get -y install nodejs
 npm install -g pnpm
