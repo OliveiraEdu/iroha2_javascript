@@ -56,7 +56,6 @@ const client = new Client({ signer })
 
 // `Client` will sign & wrap `Executable` into `VersionedSignedTransaction`
 declare const exec: Executable
-// await client.submitExecutable(toriiRequirements, exec)
 
 // ... (previous imports and code)
 
