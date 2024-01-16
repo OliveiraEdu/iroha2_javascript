@@ -57,9 +57,5 @@ declare const exec: Executable
 
 // ... (previous imports and code)
 
-const run = async () => {
-    const exec: Executable =  await client.submitExecutable(toriiRequirements, exec)
-  }
-  
-  run()
-  
+const exec: Executable = await client.submitExecutable(toriiRequirements, exec);
+
