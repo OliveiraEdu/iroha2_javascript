@@ -11,10 +11,10 @@ npm init
 echo "@iroha2:registry=https://nexus.iroha.tech/repository/npm-group/" > .npmrc
 npm i @iroha2/client@5.0.0@5.0.0
 npm i @iroha2/data-model@5.0.0
-npm i @iroha2/crypto-core
-npm i @iroha2/crypto-target-node
-npm i @iroha2/crypto-target-web
-npm i @iroha2/crypto-target-bundler
+npm i @iroha2/crypto-core@5.0.0
+npm i @iroha2/crypto-target-node@5.0.0
+npm i @iroha2/crypto-target-web@5.0.0
+npm i @iroha2/crypto-target-bundler@5.0.0
 npm i hada
 npm i tsx -g
 npm i node fetch
