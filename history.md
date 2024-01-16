@@ -11,15 +11,15 @@ apt-get -y install nodejs
 npm install -g pnpm
 npm init
 echo "@iroha2:registry=https://nexus.iroha.tech/repository/npm-group/" > .npmrc
-pnpm add @iroha2/client@5.0.0
-pnpm add @iroha2/data-model@5.0.0
-pnpm add @iroha2/crypto-core
-pnpm add @iroha2/crypto-target-node
-pnpm add @iroha2/crypto-target-web
-pnpm add @iroha2/crypto-target-bundler
-pnpm add hada
-pnpm add tsx -g
-pnpm add node fetch
+npm i @iroha2/client@5.0.0
+npm i @iroha2/data-model@5.0.0
+npm i @iroha2/crypto-core
+npm i @iroha2/crypto-target-node
+npm i @iroha2/crypto-target-web
+npm i @iroha2/crypto-target-bundler
+npm i hada
+npm i tsx -g
+npm i node fetch
 ```
 
  Running scripts
