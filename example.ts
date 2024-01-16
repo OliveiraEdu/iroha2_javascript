@@ -56,5 +56,14 @@ const client = new Client({ signer })
 
 // `Client` will sign & wrap `Executable` into `VersionedSignedTransaction`
 declare const exec: Executable
-await client.submitExecutable(toriiRequirements, exec)
+// await client.submitExecutable(toriiRequirements, exec)
 
+// ... (previous imports and code)
+
+const run = async () => {
+    const exec: Executable = /* create Executable instance */;
+    await client.submitExecutable(toriiRequirements, exec);
+  };
+  
+  run();
+  
