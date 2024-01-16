@@ -53,9 +53,7 @@ declare const toriiRequirements: ToriiRequirementsForApiHttp
 const client = new Client({ signer })
 
 // `Client` will sign & wrap `Executable` into `VersionedSignedTransaction`
-declare const exec: Executable
+const exec: Executable = null; // or some default value
+await client.submitExecutable(toriiRequirements, exec);
 
-// ... (previous imports and code)
-
-const exec: Executable = await client.submitExecutable(toriiRequirements, exec);
 
