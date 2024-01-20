@@ -39,8 +39,8 @@ const signer = new Signer(accountId, keyPair)
 const toriiRequirements: ToriiRequirementsForApiHttp &
   ToriiRequirementsForApiWebSocket &
   ToriiRequirementsForTelemetry = {
-  apiURL: 'http://127.0.0.1:8080',
-  telemetryURL: 'http://127.0.0.1:8081',
+  apiURL: 'http://10.0.0.100:8080',
+  telemetryURL: 'http://10.0.0.100:8081',
   ws: WS,
   fetch: typeof window !== 'undefined' ? fetch.bind(window) : fetch,
 }
